@@ -1,0 +1,375 @@
+/* ── 폰트 ── */
+html, body, [class*="css"] {
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    color: #F8FAFC;
+}
+
+/* ── 배경 ── */
+[data-testid="stAppViewContainer"] {
+    background: #071426;
+}
+
+/* ── Streamlit 기본 숨김 ── */
+header, #MainMenu, footer {
+    visibility: hidden;
+}
+
+/* ── 전역 불투명도 리셋 ── */
+* { opacity: 1; }
+p, span, label, div { opacity: 1 !important; }
+
+/* ── 제목 공통 ── */
+h1, h2, h3, h4, h5, h6 {
+    color: #F8FAFC !important;
+    font-weight: 900 !important;
+}
+
+/* ── 페이지 타이틀 ── */
+.page-title,
+.fraud-page-title {
+    color: #F8FAFC !important;
+    font-size: 26px;
+    font-weight: 900;
+    margin: 0 0 20px 0;
+}
+
+/* ── 섹션 타이틀 ── */
+.section-title,
+.fraud-section-title {
+    color: #EAF2FF !important;
+    font-size: 20px;
+    font-weight: 900;
+    margin: 20px 0 12px 0;
+}
+
+/* ══════════════════════════════════════
+   네비게이션 (app.py 인라인 CSS로 이동)
+   여기선 버튼 공통만 유지
+   ══════════════════════════════════════ */
+.stButton > button {
+    background: #0B1F38;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(96,165,250,0.45);
+    border-radius: 10px;
+    height: 42px;
+    font-weight: 800;
+    font-size: 14px;
+    white-space: nowrap;
+}
+.stButton > button:hover {
+    background: #123A68;
+    color: #FFFFFF !important;
+    border: 1px solid #3B82F6;
+}
+
+/* ══════════════════════════════════════
+   Hero (메인 페이지)
+   ══════════════════════════════════════ */
+.hero {
+    height: 320px;
+    background:
+        radial-gradient(circle at 75% 45%, rgba(37,99,235,0.35), transparent 35%),
+        linear-gradient(135deg, #061225 0%, #071B35 55%, #092A5E 100%);
+    border: 1px solid rgba(96,165,250,0.25);
+    border-radius: 20px;
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.eyebrow {
+    color: #60A5FA !important;
+    font-weight: 800;
+    font-size: 13px;
+}
+.hero h1 {
+    color: #FFFFFF !important;
+    font-size: 38px;
+    line-height: 1.25;
+    margin: 8px 0 0;
+}
+.hero-desc {
+    color: #D6E4FF !important;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-top: 14px;
+    font-weight: 600;
+}
+.hero-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #2563EB;
+    color: #FFFFFF !important;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 13px;
+}
+.shield-box {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: rgba(37,99,235,0.12);
+    border: 1px solid rgba(96,165,250,0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.shield { font-size: 100px; }
+
+/* ══════════════════════════════════════
+   공통 카드 — 다크 (네온 테두리)
+   ══════════════════════════════════════ */
+.dark-card,
+.simulation-result {
+    background: #060F1E;
+    border: 1.5px solid rgba(96,165,250,0.15);
+    border-radius: 16px;
+    padding: 22px;
+    min-height: 150px;
+    color: #F8FAFC !important;
+    box-shadow:
+        0 0 0 1px rgba(96,165,250,0.08),
+        0 0 18px rgba(96,165,250,0.12),
+        inset 0 1px 0 rgba(255,255,255,0.04);
+    transition: box-shadow 0.2s, border-color 0.2s;
+    box-sizing: border-box;
+}
+.dark-card:hover {
+    box-shadow:
+        0 0 0 1.5px rgba(96,165,250,0.55),
+        0 0 28px rgba(96,165,250,0.28),
+        inset 0 1px 0 rgba(255,255,255,0.06);
+    border-color: rgba(96,165,250,0.55);
+}
+.dark-card p, .dark-card span, .dark-card div,
+.simulation-result p, .simulation-result span, .simulation-result div {
+    color: #D6E4FF !important;
+    opacity: 1 !important;
+    font-weight: 700;
+}
+.dark-card h1, .dark-card h2, .dark-card h3, .dark-card h4,
+.simulation-result h1, .simulation-result h2, .simulation-result h3, .simulation-result h4 {
+    color: #FFFFFF !important;
+    font-weight: 900 !important;
+}
+.dark-card h2, .simulation-result h2 { font-size: 32px; margin: 0; }
+.dark-card span { color: #60A5FA !important; }
+
+/* ── 메인 페이지 전용 KPI 카드 ── */
+.main-kpi-card {
+    background: linear-gradient(135deg, #0f2744 0%, #0a1a2f 100%);
+    border: 1px solid #1E3A5F;
+    border-radius: 14px;
+    padding: 22px 20px 18px;
+    box-sizing: border-box;
+    min-height: 110px;
+}
+
+/* ══════════════════════════════════════
+   공통 카드 — 라이트 (화이트)
+   ══════════════════════════════════════ */
+.metric-card,
+.white-card,
+.insight-card {
+    background: #FFFFFF;
+    color: #111827 !important;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 22px;
+    box-sizing: border-box;
+}
+.metric-card *, .white-card *, .insight-card * {
+    color: #111827 !important;
+    opacity: 1 !important;
+}
+.metric-card h2 { font-size: 30px; margin: 0; }
+.metric-card p  { font-size: 14px; margin-bottom: 8px; }
+
+/* ══════════════════════════════════════
+   모델 비교 — 추천 카드
+   ══════════════════════════════════════ */
+.recommend-card {
+    background: #F8FBFF;
+    border: 1px solid #CFE2FF;
+    border-radius: 18px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+}
+.recommend-card, .recommend-card * { color: #111827 !important; opacity: 1 !important; }
+.recommend-card p   { margin: 0; font-weight: 800; }
+.recommend-card h2  { margin: 4px 0; font-size: 22px; font-weight: 900 !important; }
+.trophy {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: #EAF3FF;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 34px; flex-shrink: 0;
+}
+.recommend-metrics { margin-left: auto; display: flex; gap: 24px; }
+.recommend-metrics div { text-align: center; }
+.recommend-metrics b   { display: block; font-size: 22px; font-weight: 900; }
+.recommend-metrics span{ font-size: 12px; font-weight: 800; }
+
+/* ══════════════════════════════════════
+   이상거래 분석 카드
+   ══════════════════════════════════════ */
+.fraud-kpi-card {
+    background: #060F1E;
+    border: 1.5px solid rgba(96,165,250,0.2);
+    border-radius: 16px;
+    padding: 20px;
+    min-height: 130px;
+    box-sizing: border-box;
+    box-shadow: 0 0 22px rgba(37,99,235,0.25), inset 0 1px 0 rgba(255,255,255,0.04);
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+.fraud-kpi-card:hover {
+    box-shadow: 0 0 32px rgba(37,99,235,0.45), inset 0 1px 0 rgba(255,255,255,0.06);
+    border-color: rgba(96,165,250,0.6);
+}
+.fraud-kpi-card p  { color: #93C5FD !important; font-size: 13px; font-weight: 900; margin: 0 0 8px 0; }
+.fraud-kpi-card h2 { color: #F87171 !important; font-size: 30px; font-weight: 900; margin: 0; }
+.fraud-kpi-card span { color: #64748B !important; font-size: 12px; font-weight: 800; }
+
+.fraud-detail-card,
+.fraud-score-card,
+.fraud-decision-card,
+.fraud-reason-card {
+    background: #060F1E;
+    border: 1.5px solid rgba(96,165,250,0.2);
+    border-radius: 16px;
+    padding: 22px;
+    min-height: 260px;
+    box-sizing: border-box;
+    box-shadow: 0 0 24px rgba(37,99,235,0.2), inset 0 1px 0 rgba(255,255,255,0.04);
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+.fraud-detail-card:hover,
+.fraud-score-card:hover,
+.fraud-decision-card:hover,
+.fraud-reason-card:hover {
+    box-shadow: 0 0 32px rgba(37,99,235,0.4);
+    border-color: rgba(96,165,250,0.55);
+}
+.fraud-detail-card h3,
+.fraud-score-card h3,
+.fraud-decision-card h3,
+.fraud-reason-card h3 {
+    color: #F8FAFC !important;
+    font-size: 18px;
+    font-weight: 900 !important;
+    margin: 0 0 16px 0;
+}
+.fraud-score-card { text-align: center; }
+.fraud-score-circle {
+    width: 150px; height: 150px;
+    border-radius: 50%;
+    margin: 10px auto 16px;
+    border: 16px solid #EF4444;
+    display: flex; justify-content: center; align-items: center;
+    color: #F8FAFC !important;
+    font-size: 38px; font-weight: 900;
+    background: #060F1E;
+    box-shadow: 0 0 24px rgba(239,68,68,0.5);
+}
+.fraud-decision-box {
+    background: #1A0808;
+    color: #F87171 !important;
+    border: 1.5px solid rgba(239,68,68,0.6);
+    border-radius: 14px;
+    text-align: center;
+    padding: 28px 0;
+    font-size: 32px; font-weight: 900;
+    margin-bottom: 16px;
+}
+.fraud-tag-box {
+    background: #060F1E;
+    border: 1.5px solid rgba(96,165,250,0.25);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 14px 0;
+}
+.fraud-tag {
+    display: inline-block;
+    background: #0D1F35;
+    color: #60A5FA !important;
+    border: 1px solid rgba(96,165,250,0.5);
+    border-radius: 999px;
+    padding: 7px 14px;
+    margin: 4px 6px 4px 0;
+    font-size: 13px; font-weight: 900;
+}
+
+/* ══════════════════════════════════════
+   차트 / 테이블 타이틀
+   ══════════════════════════════════════ */
+.table-title,
+.chart-title,
+.risk-title {
+    color: #EAF2FF !important;
+    background: #0A1A2F;
+    padding: 12px 16px;
+    border-radius: 12px 12px 0 0;
+    font-weight: 900;
+    font-size: 13px;
+    border: 1px solid rgba(96,165,250,0.25);
+}
+
+/* ══════════════════════════════════════
+   Streamlit 기본 위젯 스타일
+   ══════════════════════════════════════ */
+input, textarea, select,
+.stTextInput input, .stDateInput input,
+.stSelectbox div, .stSelectbox span {
+    color: #111827 !important;
+    opacity: 1 !important;
+}
+[data-testid="stSelectbox"] label,
+[data-testid="stDateInput"] label,
+[data-testid="stTextInput"] label {
+    color: #F8FAFC !important;
+    font-weight: 900 !important;
+}
+[data-testid="stCaptionContainer"],
+[data-testid="stCaptionContainer"] * {
+    color: #CBD5E1 !important;
+    opacity: 1 !important;
+    font-weight: 700;
+}
+[data-testid="stMarkdownContainer"] { color: #F8FAFC !important; }
+[data-testid="stMarkdownContainer"] strong { color: inherit !important; font-weight: 900; }
+
+/* ══════════════════════════════════════
+   데이터프레임 / 테이블 정렬
+   ══════════════════════════════════════ */
+div[data-testid="stDataFrame"] {
+    border: 1px solid #1E3A5F;
+    border-radius: 8px;
+    overflow: hidden;
+}
+div[data-testid="stDataFrame"] * { font-size: 12px !important; }
+
+/* ══════════════════════════════════════
+   컬럼 수직 정렬
+   ══════════════════════════════════════ */
+div[data-testid="stHorizontalBlock"] { align-items: stretch; }
+
+/* ══════════════════════════════════════
+   로그인
+   ══════════════════════════════════════ */
+.login-user-box {
+    background: #0D2442;
+    color: #F8FAFC !important;
+    border: 1px solid #2563EB;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
