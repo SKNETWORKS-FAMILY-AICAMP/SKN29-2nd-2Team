@@ -464,8 +464,7 @@ Card-Fraud-Control-Tower/
 │   ├── catboost_model.pkl
 │   ├── softvoting_model.pkl
 │   ├── stacking_model.pkl
-│   ├── xgboost_tuned.pkl
-│   └── xgboost_threshold_01.pkl ~ xgboost_threshold_09.pkl
+│   └──xgboost_tuned.pkl
 │
 ├── notebook/
 │   ├── eda_clean.ipynb
